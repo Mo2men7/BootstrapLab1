@@ -1,0 +1,15 @@
+create navbar with 2 sections (brand, form)
+sign up form with:-
+	- Secondary background
+	- Border with warning theme
+	- First name input
+	- Last name input 
+	- Password input
+	- Email 
+	- Gender (radio button)
+	- Terms and condition (checkbox)
+Validate the form with validation classes and feedback messages
+
+replace secondary background with "bg-light"
+Form has title called "Sign up"
+every input will be in full width

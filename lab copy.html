@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab1</title>
+    <link rel="stylesheet" href="bootstrap.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  </head>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Cairo:wght@300;400;500&family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
+    * {
+      font-family: "Poppins", sans-serif;
+    }
+  </style>
+  <body>
+    <!-- nav start -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary bg-dark">
+      <div class="container-fluid ms-5 me-5">
+        <a class="navbar-brand text-light fw-bold text-uppercase" href="#"
+          >Brand<span class="text-primary">Name</span></a
+        >
+
+        <divs class="collapse navbar-collapse" id="navbarSupportedContent">
+          <form class="d-flex ms-auto mb-2 mb-lg-0" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-primary" type="submit">Search</button>
+          </form>
+        </divs>
+      </div>
+    </nav>
+    <!-- nav end -->
+    <div class="container d-flex justify-content-center align-items-center">
+      <!-- form start -->
+      <form class="bg-light border border-warning p-5 w-75 mt-5 needs-validation" id="myForm" novalidate>
+        <div class="text-center text-uppercase fs-2 text-dark mb-5">Sign Up</div>
+        <div class="mb-3">
+            <div class="input-group mt-4 flex-wrap">
+            <span class="input-group-text">First Name</span>
+            <input type="text" class="form-control" id="firstname" placeholder="Firstname" required>
+            <small class="invalid-feedback">Enter your first name</small>
+        </div>
+        <div class="mb-3"><div class="input-group mt-4 flex-wrap">
+            <span class="input-group-text">Last Name</span>
+            <input type="text" class="form-control" id="lastname" placeholder="Lastname" required>
+            <small class="invalid-feedback">Enter your last name</small>
+        </div>
+        <div class="mb-3"><div class="input-group mt-4 flex-wrap">
+            <span class="input-group-text"><i class="fa-solid fa-user"></i></span>
+            <input type="text" class="form-control" id="username" placeholder="Username" required>
+            <small class="invalid-feedback">Enter your username</small>
+        </div>
+        <div class="mb-3"><div class="input-group mt-4 flex-wrap">
+            <span class="input-group-text"><i class="fa-solid fa-at"></i></span>
+            <input type="email" class="form-control" id="email" placeholder="Eamil" required>
+            <small class="invalid-feedback">Enter your email</small>
+        </div>
+        <div class="mb-3"><div class="input-group mt-4 flex-wrap">
+            <span class="input-group-text"><i class="fa-solid fa-key"></i></span>
+            <input type="password" class="form-control" id="password" placeholder="Password" required>
+            <small class="invalid-feedback">Enter your password</small>
+        </div>
+        <div class="input-group mb-4">
+            <label class="w-100">Gender</label>
+            <div class="ms-5">
+                <div class="form-check w-100">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="male" required/>
+                    <label class="form-check-label" for="male"> Male </label>
+                  </div>
+                  <div class="form-check w-100">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="female" required/>
+                    <label class="form-check-label" for="female"> Female </label>
+                  </div>
+              </div>
+            </div>
+            <div class="mb-3 mt-4 form-check">
+              <input type="checkbox" id="terms" class="form-check-input" id="exampleCheck1" required>
+              <label class="form-check-label" for="exampleCheck1">Accept Terms and condition</label>
+              <div class="invalid-feedback">Check this checkbox to continue.</div>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        <!-- <input type="button" id="submit" class="btn btn-primary" value="submit"> -->
+      </form>
+      <!-- form end -->
+    </div>
+  </body>
+  <script>
+    // Add event listener to the form's submit event
+    console.log(document.getElementById("myForm"))
+    document.getElementById("myForm").addEventListener(
+      "submit",
+      function (event) {
+        event.preventDefault(); // Prevent form submission if validation fails
+        if (this.checkValidity() === false) {
+          event.stopPropagation(); // Stop the event from propagating further
+        }
+        this.classList.add("was-validated"); // Add 'was-validated' class to enable Bootstrap's styling
+      },
+      false
+    );
+  </script>
+
+</html>
